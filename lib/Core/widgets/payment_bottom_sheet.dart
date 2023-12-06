@@ -17,6 +17,9 @@ class PaymentBottomSheet extends StatelessWidget {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ThankYouView()));
         }
+        if (state is PaymentFailure) {
+          print(state.errMessage);
+        }
       },
       builder: (context, state) {
         return Column(
@@ -32,7 +35,7 @@ class PaymentBottomSheet extends StatelessWidget {
                 text: "pay",
                 ontab: () async {
                   PaymentInputModel paymentInputModel =
-                      PaymentInputModel(amount: "100", currency: "USD");
+                      PaymentInputModel(amount: (100*100).toString(), currency: "USD");
                   await BlocProvider.of<PaymentCubit>(context)
                       .makePayment(paymentInputModel: paymentInputModel);
                 },

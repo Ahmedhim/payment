@@ -8,14 +8,14 @@ import 'package:payment_app/Features/checkout/presention/views/mycart_views.dart
 
 void main() {
   Stripe.publishableKey = Apikeys.PublisherKey;
-
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(PaymentApp());
 }
 
 class PaymentApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  BlocProvider(
+    return BlocProvider(
       create: (context) => PaymentCubit(CheckoutRepoImp()),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
