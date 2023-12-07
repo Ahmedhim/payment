@@ -90,11 +90,13 @@ class MycartBody extends StatelessWidget {
           CustomButton(
             text: "Complete Payment",
             ontab: () {
-              showModalBottomSheet(shape: const RoundedRectangleBorder(),
-                context: context, builder: (context) {
-                return const PaymentBottomSheet();
-              }, );
-           
+              showModalBottomSheet(
+                shape: const RoundedRectangleBorder(),
+                context: context,
+                builder: (context) {
+                  return const PaymentBottomSheet();
+                },
+              );
             },
           ),
           const SizedBox(

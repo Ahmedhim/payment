@@ -91,11 +91,9 @@ class PaymentModel {
         object: json['object'] as String?,
         amount: json['amount'] as int?,
         amountCapturable: json['amount_capturable'] as int?,
-       
         amountReceived: json['amount_received'] as int?,
         application: json['application'] as dynamic,
         applicationFeeAmount: json['application_fee_amount'] as dynamic,
-       
         canceledAt: json['canceled_at'] as dynamic,
         cancellationReason: json['cancellation_reason'] as dynamic,
         captureMethod: json['capture_method'] as String?,
@@ -109,13 +107,11 @@ class PaymentModel {
         lastPaymentError: json['last_payment_error'] as dynamic,
         latestCharge: json['latest_charge'] as dynamic,
         livemode: json['livemode'] as bool?,
-      
         nextAction: json['next_action'] as dynamic,
         onBehalfOf: json['on_behalf_of'] as dynamic,
         paymentMethod: json['payment_method'] as dynamic,
         paymentMethodConfigurationDetails:
             json['payment_method_configuration_details'] as dynamic,
-       
         paymentMethodTypes: json['payment_method_types'] as List<dynamic>?,
         processing: json['processing'] as dynamic,
         receiptEmail: json['receipt_email'] as dynamic,
